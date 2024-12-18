@@ -4,7 +4,9 @@ import os
 
 app = Flask(__name__)
 
-
+# Azure Blob Storage connection details
+AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=docintelstorage12345;AccountKey=2YcYFyBKqBs9S7ZsGodcuAS6S0pdn5QcJ4H3WV5xWAY46VlE2YYtlUy7cK6UVzoDQ9c50WpjC18G+AStgoNTng==;EndpointSuffix=core.windows.net"
+CONTAINER_NAME = "receipts"
 
 # Initialize the BlobServiceClient
 blob_service_client = BlobServiceClient.from_connection_string(AZURE_CONNECTION_STRING)
